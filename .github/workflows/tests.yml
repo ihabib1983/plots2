@@ -136,7 +136,7 @@ jobs:
         chromedriver --url-base=/wd/hub &
         bundle exec rails test:system
     - name: Archive system test screenshots
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: system-test-screenshots
         path: tmp/screenshots/*
@@ -183,7 +183,7 @@ jobs:
         chromedriver --url-base=/wd/hub &
         bundle exec rails test test/comment_system_tests
     - name: Archive system test screenshots
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: system-test-screenshots
         path: tmp/screenshots/*
